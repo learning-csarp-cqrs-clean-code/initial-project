@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InitialProject.Web.Client",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InitialProject.Desktop", "PresentationLayer\InitialProject.Desktop\InitialProject.Desktop.csproj", "{6DBE369D-5F98-4479-9B52-F8D3E4707294}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialProject.Mobile", "PresentationLayer\InitialProject.Mobile\InitialProject.Mobile.csproj", "{59B39DA6-8A2B-48F0-BCD1-B9EAB0AA91CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -53,6 +55,12 @@ Global
 		{6DBE369D-5F98-4479-9B52-F8D3E4707294}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DBE369D-5F98-4479-9B52-F8D3E4707294}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DBE369D-5F98-4479-9B52-F8D3E4707294}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B39DA6-8A2B-48F0-BCD1-B9EAB0AA91CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59B39DA6-8A2B-48F0-BCD1-B9EAB0AA91CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59B39DA6-8A2B-48F0-BCD1-B9EAB0AA91CD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{59B39DA6-8A2B-48F0-BCD1-B9EAB0AA91CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59B39DA6-8A2B-48F0-BCD1-B9EAB0AA91CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59B39DA6-8A2B-48F0-BCD1-B9EAB0AA91CD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +70,7 @@ Global
 		{ED6B0B5D-2766-47A0-838D-9AA8D5192A88} = {A2771E42-423B-4FA2-8D9F-73D92DBA70FA}
 		{1E0BA0C8-8CAB-4AA4-BEAC-71BAB056A47B} = {A2771E42-423B-4FA2-8D9F-73D92DBA70FA}
 		{6DBE369D-5F98-4479-9B52-F8D3E4707294} = {A2771E42-423B-4FA2-8D9F-73D92DBA70FA}
+		{59B39DA6-8A2B-48F0-BCD1-B9EAB0AA91CD} = {A2771E42-423B-4FA2-8D9F-73D92DBA70FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04C2197E-B161-40A2-B9B5-92E01C78C620}
