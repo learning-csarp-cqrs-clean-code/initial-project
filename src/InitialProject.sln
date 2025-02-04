@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfrastructureLayer", "Infr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PresentationLayer", "PresentationLayer", "{A2771E42-423B-4FA2-8D9F-73D92DBA70FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialProject.WebApi", "PresentationLayer\InitialProject.WebApi\InitialProject.WebApi.csproj", "{4A18DD82-BCDC-4FFE-A934-23E82C935C0E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,9 +31,16 @@ Global
 		{A91641EC-C934-46BF-B23A-C7C1D0980F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A91641EC-C934-46BF-B23A-C7C1D0980F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A91641EC-C934-46BF-B23A-C7C1D0980F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A18DD82-BCDC-4FFE-A934-23E82C935C0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A18DD82-BCDC-4FFE-A934-23E82C935C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A18DD82-BCDC-4FFE-A934-23E82C935C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A18DD82-BCDC-4FFE-A934-23E82C935C0E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A18DD82-BCDC-4FFE-A934-23E82C935C0E} = {A2771E42-423B-4FA2-8D9F-73D92DBA70FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04C2197E-B161-40A2-B9B5-92E01C78C620}
