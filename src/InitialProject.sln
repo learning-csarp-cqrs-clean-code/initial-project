@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PresentationLayer", "Presen
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialProject.WebApi", "PresentationLayer\InitialProject.WebApi\InitialProject.WebApi.csproj", "{4A18DD82-BCDC-4FFE-A934-23E82C935C0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialProject.Desktop", "InitialProject.Desktop\InitialProject.Desktop.csproj", "{3AF84B17-CFD2-4F1B-922C-278BF07E273F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,12 +37,17 @@ Global
 		{4A18DD82-BCDC-4FFE-A934-23E82C935C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A18DD82-BCDC-4FFE-A934-23E82C935C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A18DD82-BCDC-4FFE-A934-23E82C935C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AF84B17-CFD2-4F1B-922C-278BF07E273F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AF84B17-CFD2-4F1B-922C-278BF07E273F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AF84B17-CFD2-4F1B-922C-278BF07E273F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AF84B17-CFD2-4F1B-922C-278BF07E273F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4A18DD82-BCDC-4FFE-A934-23E82C935C0E} = {A2771E42-423B-4FA2-8D9F-73D92DBA70FA}
+		{3AF84B17-CFD2-4F1B-922C-278BF07E273F} = {A2771E42-423B-4FA2-8D9F-73D92DBA70FA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {04C2197E-B161-40A2-B9B5-92E01C78C620}
