@@ -1,7 +1,7 @@
 ﻿using DomainLayer.Commons;
 using Microsoft.EntityFrameworkCore;
 
-namespace InfrastructureLayer.Persistence.Context
+namespace InfrastructureLayer.Persistence.Data
 {
     public class ApplicationDbContext : DbContext
     {

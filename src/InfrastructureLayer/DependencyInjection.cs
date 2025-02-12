@@ -1,4 +1,4 @@
-﻿using InfrastructureLayer.Persistence.Context;
+﻿using InfrastructureLayer.Persistence.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;

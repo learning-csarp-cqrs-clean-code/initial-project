@@ -1,4 +1,6 @@
 using InfrastructureLayer;
+using InfrastructureLayer.Persistence.Data;
+using InfrastructureLayer.Persistence.Seed;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,13 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastucture();
 
 var app = builder.Build();
+
+// Adatok inicializálása
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    InitialDataSeeder.Seed(context);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
