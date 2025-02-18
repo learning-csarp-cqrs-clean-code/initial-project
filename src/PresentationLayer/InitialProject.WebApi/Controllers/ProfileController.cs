@@ -1,4 +1,5 @@
 ﻿using DomainLayer.Commons;
+using DomainLayer.Entities;
 using InfrastructureLayer.Persistence.Data;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,7 +17,7 @@ namespace InitialProject.WebApi.Controllers
         }
 
         [HttpGet]
-        public ActionResult<IEnumerable<Profile>> GetProfiles()
+        public ActionResult<IEnumerable<Profil>> GetProfiles()
         {
             return Ok(_context.Profiles.ToList());
         }
