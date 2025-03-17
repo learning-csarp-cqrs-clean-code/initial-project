@@ -1,7 +1,11 @@
-﻿using DomainLayer.Commons;
+﻿using ApplicationLayer.Dtos;
+using ApplicationLayer.Features.Profiles;
+using DomainLayer.Commons;
 using DomainLayer.Entities;
 using InfrastructureLayer.Persistence.Data;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace InitialProject.WebApi.Controllers
 {
@@ -9,25 +13,32 @@ namespace InitialProject.WebApi.Controllers
     [Route("api/[controller]")]
     public class ProfilesController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IMediator _mediator;
 
-        public ProfilesController(ApplicationDbContext context)
+        public ProfilesController(IMediator? mediator)
         {
-            _context = context;
+            _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
         }
 
         [HttpGet("{email}")]
-        public ActionResult<IEnumerable<Profil>> GetProfilByEmail(string email)
+        public async Task<ActionResult<IEnumerable<Profile>>> GetProfilByEmail(string email)
         {
             if (string.IsNullOrEmpty(email))
             {
                 return BadRequest("Email cannot be empty!");
             }
-            var profil = _context.Profiles.FirstOrDefault(p => p.Email==email);
+            var profil = await _mediator.Send(new GetProfileByEmailQuery(email));
             if (profil is null)
             {
                 return NotFound("Profil not found!");
             }
+
+            var profilDto = new ProfileDto
+            {
+                Id = profil.Id,
+                Name = profil.Name,
+                Email=profil.Email
+            };
             return Ok(profil);
         }
     }

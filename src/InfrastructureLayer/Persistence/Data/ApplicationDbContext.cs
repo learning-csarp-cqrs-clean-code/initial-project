@@ -5,7 +5,7 @@ namespace InfrastructureLayer.Persistence.Data
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<Profil> Profiles { get; set; }
+        public DbSet<Profile> Profiles { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) { }
@@ -15,9 +15,9 @@ namespace InfrastructureLayer.Persistence.Data
             base.OnModelCreating(modelBuilder);
 
             // Migráció során az adatbázisba kerülő adatok
-            modelBuilder.Entity<Profil>().HasData(
-                new Profil(Guid.NewGuid()) { Name = "John Doe", Email = "john.doe@example.com" },
-                new Profil(Guid.NewGuid()) { Name = "Jane Smith", Email = "jane.smith@example.com" }
+            modelBuilder.Entity<Profile>().HasData(
+                new Profile(Guid.NewGuid()) { Name = "John Doe", Email = "john.doe@example.com" },
+                new Profile(Guid.NewGuid()) { Name = "Jane Smith", Email = "jane.smith@example.com" }
             );
 
             // Konfogurációs adatok betöltése az assambly-ből, pl. ProfileConfiguration

@@ -1,3 +1,4 @@
+using ApplicationLayer;
 using InfrastructureLayer;
 using InfrastructureLayer.Persistence.Data;
 using InfrastructureLayer.Persistence.Seed;
@@ -11,7 +12,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddInfrastucture();
+builder.Services.AddInfrastucture()
+    .AddApplication();
+
 
 var app = builder.Build();
 

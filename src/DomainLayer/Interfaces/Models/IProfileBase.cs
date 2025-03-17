@@ -1,6 +1,6 @@
 ﻿namespace DomainLayer.Interfaces.Models
 {
-    class IProfilBase
+    class IProfileBase
     {
         Guid Id { get; }
         string Name { get; set; } = string.Empty;

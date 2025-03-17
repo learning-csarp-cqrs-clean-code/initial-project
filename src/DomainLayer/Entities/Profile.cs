@@ -2,9 +2,9 @@
 
 namespace DomainLayer.Entities
 {
-    public class Profil : Entity
+    public class Profile : Entity
     {
-        public Profil(Guid id) : base(id)
+        public Profile(Guid id) : base(id)
         {
         }
 

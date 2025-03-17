@@ -1,4 +1,6 @@
-﻿using InfrastructureLayer.Persistence.Data;
+﻿using DomainLayer.Interfaces.Repos;
+using InfrastructureLayer.Persistence.Data;
+using InfrastructureLayer.Persistence.Repos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.DependencyInjection;
@@ -9,7 +11,8 @@ namespace InfrastructureLayer
     {
         public static IServiceCollection AddInfrastucture(this IServiceCollection services)
         {
-            services.ConfigureDatabase();
+            services.ConfigureDatabase()
+                .ConfigureRepos();
             return services;
         }
 
@@ -47,6 +50,13 @@ namespace InfrastructureLayer
                     options.ConfigureWarnings(x => x.Ignore(InMemoryEventId.TransactionIgnoredWarning));
                 }
             );
+        }
+
+        public static IServiceCollection ConfigureRepos(this IServiceCollection services)
+        {
+            services.AddScoped<IProfileRepo, ProfileRepo>();
+            return services;
+
         }
     }
 }
