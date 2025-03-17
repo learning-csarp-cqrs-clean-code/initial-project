@@ -1,3 +1,7 @@
+using InfrastructureLayer;
+using InfrastructureLayer.Persistence.Data;
+using InfrastructureLayer.Persistence.Seed;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,7 +11,17 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddInfrastucture();
+
 var app = builder.Build();
+
+// Adatok inicializálása
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    // Fejlesztés során futtatás során tesztadatok
+    InitialDataSeeder.Seed(context);
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
