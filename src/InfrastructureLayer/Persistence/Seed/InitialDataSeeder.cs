@@ -5,6 +5,7 @@ namespace InfrastructureLayer.Persistence.Seed
 {
     public static class InitialDataSeeder
     {
+        // Alkalmazás indulásakor legyenek tesztadatok
         public static void Seed(ApplicationDbContext context)
         {
             if (!context.Profiles.Any())

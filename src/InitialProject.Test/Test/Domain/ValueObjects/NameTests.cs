@@ -1,4 +1,5 @@
 using DomainLayer.ValueObjects;
+using FluentAssertions;
 using System.Xml.Linq;
 
 namespace InitialProject.Test.Test.Domain.ValueObjects
@@ -38,5 +39,4 @@ namespace InitialProject.Test.Test.Domain.ValueObjects
             act.Should().Throw<ArgumentException>();
         }
     }
-}
 }

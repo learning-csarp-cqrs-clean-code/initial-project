@@ -16,10 +16,19 @@ namespace InitialProject.WebApi.Controllers
             _context = context;
         }
 
-        [HttpGet]
-        public ActionResult<IEnumerable<Profil>> GetProfiles()
+        [HttpGet("{email}")]
+        public ActionResult<IEnumerable<Profil>> GetProfilByEmail(string email)
         {
-            return Ok(_context.Profiles.ToList());
+            if (string.IsNullOrEmpty(email))
+            {
+                return BadRequest("Email cannot be empty!");
+            }
+            var profil = _context.Profiles.FirstOrDefault(p => p.Email==email);
+            if (profil is null)
+            {
+                return NotFound("Profil not found!");
+            }
+            return Ok(profil);
         }
     }
 }
